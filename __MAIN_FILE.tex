@@ -1,0 +1,35 @@
+\documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
+%-----------------------------------------------------------------
+\usepackage{etoolbox}
+\providetoggle{deutsch}
+\global\toggletrue{deutsch}
+% \global\togglefalse{deutsch}
+%-----------------------------------------------------------------
+\input{pre-packages}
+\input{pre-variables}
+\input{pre-newcommand}
+\input{pre-Seitenlayout}
+\input{pre-Kopf-Fusszeile-2010}
+\input{pre-Kopf-Fusszeilen-text-Bericht}
+\DeclareNameAlias{author}{family-given}
+\DeclareNameAlias{editor}{family-given}
+\DeclareNameAlias{translator}{family-given}
+\addbibresource{quellen.bib}
+\begin{document}
+%-----------------------------------------------------------------
+\input{chapters/0_top}
+\tableofcontents
+\newpage
+%-----------------------------------------------------------------
+\newcommand{\chaptercount}{5} % put number of chapters here
+\foreach \c in {1,...,\chaptercount}{\input{chapters/\c_chap}}
+%-----------------------------------------------------------------
+\newpage
+\listoffigures 
+\listoftables
+\input{chapters/glossary}
+% \appendix
+% \input{chapters/appendix}
+\printbibliography
+%=================================================================
+\end{document}

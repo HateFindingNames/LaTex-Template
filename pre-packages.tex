@@ -1,0 +1,104 @@
+%\usepackage{amsmath} % abgesetzte Formeln zentriert in der Zeile
+%\usepackage[fleqn,intlimits]{amsmath} % [fleqn] abgesetzte Formeln mit festem Abstand zum linken Rand
+\usepackage[reqno,intlimits]{amsmath} % [reqno] um die gleichungsnummerierung rechts zu haben
+% intlimits: Grenzen für Integrale unterhalb und oberhalb des Zeichens
+\usepackage{amssymb}
+\usepackage{array}
+%\usepackage[ngerman]{babel}
+%\usepackage[ngerman]{varioref}
+\iftoggle{deutsch}{%
+    \usepackage[ngerman]{babel}
+    \usepackage[ngerman]{varioref}
+}{%
+    \usepackage[english]{babel}
+    \usepackage[english]{varioref}
+}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+%---------------------------
+\usepackage{booktabs}
+\usepackage{calc}
+\usepackage{cancel}
+\usepackage[labelfont={footnotesize,sf,bf},textfont={footnotesize,sf}]{caption} %Format (Textgröße, Textform) für Bildtext 
+%normalsize
+%scriptsize
+% sc --> smallcaps
+% bf --> bold face
+% sf --> sans serif
+%\usepackage{cite} %inkompatibel mit biblatex
+\usepackage[table]{xcolor}
+%\usepackage{colortbl}
+\usepackage[right]{eurosym}
+%\usepackage{caption2} %nicht zusammen mit sidecap
+%\usepackage{exscale}
+\usepackage{ellipsis}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage{floatflt}
+%----------------------------------------
+\usepackage{gensymb} %-----------
+%\usepackage{helvet}
+\usepackage{csquotes}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{lastpage}  %----------
+\usepackage{lscape}
+\usepackage{lmodern}  %-- Silbentrennung
+%\usepackage{mathpazo} % andere mathematische Symbol
+\usepackage{makeidx}
+%\usepackage{minitoc}
+\usepackage{multirow}
+\usepackage{multicol}
+%\usepackage[intoc]{nomencl}   % zwei Spalten beim Formelzeichenverzeichnis
+\iftoggle{deutsch}{%
+    \usepackage[german,intoc]{nomentbl} %vier Spalten bei Formelzeichenverzeichnis
+}{%
+    \usepackage[english,intoc]{nomentbl} %vier Spalten bei Formelzeichenverzeichnis
+}
+\usepackage{nicefrac} %----
+%\usepackage{picins} %----------
+\usepackage{paralist} %--------
+\usepackage{parallel}  %----------
+\usepackage{pdfpages} %-------
+% Define user colors using the RGB model
+%\usepackage{colortbl}
+%\definecolor{dunkelgrau}{rgb}{0.8,0.8,0.8}
+%\definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
+%\usepackage{pgfplots}
+\usepackage[figuresright]{rotating} 
+\usepackage{scrlayer-scrpage}
+%\usepackage[innercaption]{sidecap} %Beschriftung neben Bild, Tabelle, Mittelbach S333 %----------
+%\usepackage{sistyle}
+%\usepackage[locale=DE]{siunitx} %nicht zusammen mit sistyle %---------
+\usepackage[locale=DE,per-mode=symbol,parse-numbers=false]{siunitx} %nicht zusammen mit sistyle %---------
+\usepackage[font={scriptsize,sl},captionskip=3pt]{subfig} % für die Unterbilder %---------
+\usepackage{shortvrb}
+\usepackage{tablefootnote}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{textcomp}
+\usepackage{tocbasic}
+\usepackage{tikz}
+\usepackage{times} 
+\usepackage{units} %----------
+\usepackage{url}
+\usepackage{wrapfig} %----------
+\usepackage{xr-hyper}
+\usepackage{arydshln} %für \hdashline[5pt/2pt] % muss am Ende stehen, sonst gibt es Probleme mit xcolor
+\usepackage{hyperref} % muss am Schluss stehen
+\hypersetup{linkcolor={0 1 1}, linkbordercolor={1 1 1}, citebordercolor={1 1 1}} % setzt Linkboxen auf Farbe "`weiß"'
+%\usepackage{bm}
+%\usepackage[toc,symbols]{glossaries} %---------- muss nach hyperref stehen
+\usepackage[nonumberlist, acronym, toc, section]{glossaries} % muss nach hypersetup stehen
+%----------------
+%\usepackage{romannum} % Seitenzahlen in römischen Ziffern
+%\usepackage{adjustbox}
+\usepackage{scrhack}
+\usepackage[style=numeric, citestyle=numeric, backend=biber]{biblatex}
+\usepackage[useregional]{datetime2}
+\usepackage{cleveref} % löscht labels!!!!!!!!!! <--- warum? habs trotzdem eingefügt weil es die referencen nice macht ohne newcommands dafür zu brauchen. außerdem steht intellisense drauf ;)
+\usepackage{isotope} % um chemische gleichungen hübscher darstellen zu können
+\usepackage{framed} % rahmen um dinge malen können
+\usepackage{svg} % um auch vektorgrafiken als bild einfügen zu können
+\usepackage{adjustbox} % skaliert floats dynamischer (anti-over/underfull)
+\usepackage[numbered]{bookmark} % platziert im pdf reader bei der kapitelübersicht die jeweiligen kapitelnummer vor die kapitelüberschriften

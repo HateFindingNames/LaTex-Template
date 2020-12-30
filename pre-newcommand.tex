@@ -1,0 +1,168 @@
+%-------------------------
+ %\renewcommand{\captionlabelfont}{\sffamily} %für "Abbildung" und "Tabelle"
+ %\renewcommand{\captionfont}{\sffamily\small} %für den Text der Bildunterschriften
+%  \renewcommand{\captionlabelfont}{\sffamily} 
+%  \renewcommand{\captionfont}{\sffamily} %\renewcommand{\normalfont}{\sffamily} %für die Überschriften
+% Fettdruck der Bezeichnung Abbildung, Tabelle
+%\renewcommand{\captionlabelfont}{\bfseries}
+%---------------------------------------------
+%------------------ Schrifttyp in der Kopf- und Fusszeilen
+\setkomafont{pageheadfoot}{\footnotesize\sffamily}
+%---------------------------------------------------
+%Ändern der Abbildung- und Tabellenbezeichnung (Niedermair S.157)
+%_____________________________________________
+\addto\captionsngerman{\renewcommand\figurename{Abb.}}
+\addto\captionsngerman{\renewcommand\tablename{Tab.}}
+\renewcommand\listfigurename{Abbildungen}
+%_______________________________
+%Betrag eines Wertes
+% \newcommand{\abs}[1]{\lvert #1 \rvert}
+%---------------------------------------------
+% \newcommand{\absatz}[1]{\textbf{\textsc{#1}}} %siehe Mittelbach S. 876ff
+%----------------------------
+%\newcommand{\absatz}{\par \medskip}
+%______________________________
+%\newcommand{\anhang}[1]{Anhang \ref{#1}, Seite \pageref{#1}}
+% \newcommand{\anhang}[1]{Anhang \vref{#1}}
+% %________________________________
+% \newcommand{\aufgabe}{\stepcounter{plus} Aufgabe \arabic{plus}}
+%______________________________________
+%compactitem
+% \newcommand{\bci}{\begin{compactitem}}
+% \newcommand{\eci}{\end{compactitem}}
+% %______________________________________
+% %
+% \newcommand{\bi}{\begin{itemize}}
+% \newcommand{\ei}{\end{itemize}}
+% %______________________________________
+% %compactenumerate
+% \newcommand{\bce}{\begin{compactenum}}
+% \newcommand{\ece}{\end{compactenum}}
+% %_____________________________________
+% %begin equation
+% \newcommand{\be}{\begin{equation}}
+% \newcommand{\ee}{\end{equation}}
+% %_____________________________________
+% %begin equation ohne Formelnummer
+% \newcommand{\ben}{\begin{equation*}}
+% \newcommand{\een}{\end{equation*}}
+% %_____________________________________
+% %begin align ohne Formelnummer
+% \newcommand{\ban}{\begin{align*}}
+% \newcommand{\ean}{\end{align*}}
+%_____________________________________
+%begin align
+% \newcommand{\ba}{\begin{align}}
+% \newcommand{\ea}{\end{align}}
+%_____________________________________
+%minpage
+% \newcommand{\bmp}{\begin{minipage}[t]{.47\linewidth}}
+% \newcommand{\emp}{\end{minipage}}
+%_____________________________
+%  dB
+% \newcommand{\db}{dB}
+% %  dB(A)
+% \newcommand{\dba}{ dB(A) }
+% %  dB(A) für Satzende
+% \newcommand{\dbap}{ dB(A)}
+% %_________________________________
+% \newcommand{\bzw}{bzw.\,}
+% %_______________________________
+% \newcommand{\dif}{\mathrm{d}}
+%________________________________
+% neuer Zähler
+\newcounter{plus}
+\setcounter{plus}{0}
+%______________________________
+%Für das Formelverzeichnis _____________________ Formelverzeichis ____
+% Befehl umbenennen in fz
+% \let\fz\nomenclature
+% Deutsche Überschrift
+\renewcommand{\nomname}{Formelzeichen}
+% Punkte zw. Abkürzung und Erklärung
+\setlength{\nomlabelwidth}{.20\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% Zeilenabstände verkleinern
+\setlength{\nomitemsep}{-\parsep}
+%_____________________________
+% \newcommand{\bild}[1]{Abb. \vref{#1}}
+% \newcommand{\sbild}[1]{siehe Abb. \vref{#1}}
+% \newcommand{\bilder}[2]{Abb. \vrefrange{#1}{#2}}
+% \newcommand{\bildseite}[1]{Abb. \vref{#1}} % erzeugt "`Abb. nn auf Seite nn
+% \newcommand{\tabelle}[1]{Tab. \vref{#1}}
+% \newcommand{\tabellenseite}[1]{Tab. \vref{#1}} % erzeugt "`Tab. nn auf Seite nn
+% für \vref ist usepackage[german]{varioref} einzufügen
+%_-------------------------------- Freiraum
+% \newcommand{\freiraum}[1]{\begin{figure}[H]\vspace{#1\textheight}\end{figure}}
+%_____________________________
+% Gleichung
+% \newcommand{\gl}[1]{Gl.\,(\ref{#1})}
+% \newcommand{\sgl}[1]{siehe Gl.\,(\ref{#1})}
+% \newcommand{\glbereich}[2]{Gl. \vrefrange[]{#1}{#2}}
+%_____________________________
+% Grad Celsius
+% \newcommand{\grad}{\,\degC}
+% \newcommand{\gradC}{\,\degree}
+%______________________________________
+% Großbuchstaben als Indizes kleiner schreiben; spezielle im Mathemodus
+% \newcommand{\klein}[1]{\scriptscriptstyle{#1}}% Fettdruck der Bezeichnung 
+%______________________________
+%% Kasten
+% \newcommand{\kasten}{\fbox{\rule{0.0pt}{10pt}{{ } } }}
+%______________________________
+%\newcommand{\kapitel}[1]{Kapitel \ref{#1}, Seite \pageref{#1}}
+% \newcommand{\kapitel}[1]{Kapitel \vref{#1}}
+%_____________________________
+%  LAeq für den äquivalenten Dauerschallpegel
+% \newcommand{\laeq}{ $L_{Aeq}$ }
+%  LAeq für den äquivalenten Dauerschallpegel am Satzende
+% \newcommand{\laeqp}{ $L_{Aeq}$}
+%_________________________________
+%   Linie zeichnen
+\newcommand{\linie}{\rule{0.5\textwidth}{0.1pt}}
+%---------------------- LaTeX
+% \newcommand{\lt}{\LaTeX\,\,}
+%----------------------------
+% \newcommand{\nl}{\newline}
+%__________________________________
+%  multicolumn für Tabellen
+% \newcommand{\mc}{\multicolumn}
+%% \mc{1}{c}{Text}
+%_________________________________
+%    Parallel
+% \newcommand{\pl}[1]{\ParallelLText{#1}}
+% \newcommand{\pr}[1]{\ParallelRText{#1}}
+% \newcommand{\pp}{\ParallelPar}
+%------------ rot unterstrichen
+% \newcommand{\rotunterstrichen}[1]{\textcolor{red}{\underline{\textcolor{black}{#1}}}}
+%________________ Realteil
+% \newcommand{\real}[1]{\text{Re}\left\{#1\right\}}
+%________________________________--
+% \newcommand{\seite}[1]{Seite \pageref{#1}}
+% \newcommand{\seiten}[2]{\vpagerefrange{#1}{#2}}
+%----------------------------
+%        TEXT Rot
+\newcommand{\textrot}[1]{\textcolor{red}{#1}}
+%______________________________
+%Abkürzung für \multicolumn
+% \newcommand{\tab}[2]{\multicolumn{1}{#1}{#2}}
+%_____________________________________
+% doppelt unterstreichen
+% \newcommand{\unterstreichen}[1]{\underline{\underline{#1}}}
+% einfach unterstreichen
+% \newcommand{\ul}[1]{\underline{#1}}
+%______________________________
+%kurze Verbatimausgabe
+%\MakeShortVerb{\|} %mittelbach S.160 mit \usepackage{shortvrb}
+%_______________________________________
+% vspace
+% \newcommand{\vsf}{\vspace{5pt}}
+%_________________________________
+% \newcommand{\zb}{z.B.\,}
+% \newcommand{\idr}{i.d.R.\,}
+%_______________________________
+% Zähler-einfach
+\newcounter{req}
+% \newcommand{\zaehler}[1]{\refstepcounter{req}{#1} \thereq}
+%% Beispielaufzählung \zaehler{Beispiel}\\
+%_____________________________________

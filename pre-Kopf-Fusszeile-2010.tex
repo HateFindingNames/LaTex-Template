@@ -1,0 +1,45 @@
+%Einstellungen für Kopf- und Fusszeilen mit dem KOMA-Skript und \usepackage{scrpage2}
+\pagestyle{scrheadings}
+%\pagestyle{scrplain}
+% le --> links, gerade Seite
+% ce --> mittig, gerade Seite
+% re --> rechts, gerade Seite
+% lo --> links, ungerade Seite
+% co --> mittig, ungerade Seite
+% ro --> rechts, ungerade Seite
+%---------------------------------------------
+% Löschen aller Einträge
+%\clearscrheadings
+% \automark[section]{subsection}
+% \pagemark --> Seitenzahl
+% \automark --> Kapitelüberschriften
+% \leftmark --> ??
+% \rightmark --> ??
+%::::::::::::::::::::::::::::::::::: Kopfzeile
+% Kopfzeile gerade Seite
+\automark[chapter]{chapter}
+\lehead[]{\titelkopfzeilelinkseven}
+\cehead[]{\titelkopfzeilemitteeven}
+\rehead[]{\titelkopfzeilerechtseven}
+% Kopfzeile ungerade Seite
+\lohead[]{\titelkopfzeilelinksodd}
+\cohead[]{\titelkopfzeilemitteodd}
+\rohead[]{\titelkopfzeilerechtsodd}
+% Linie in der Kopfzeile
+%\setheadtopline{0.2pt} % obere Linie in der Kopfzeile; nur bei scrartcl
+%\setheadsepline{0.4pt} % untere Linie in der Kopfzeile; nur bei scrartcl
+\KOMAoptions{headsepline=0.4pt}
+% Linie in der Fusszeile
+%::::::::::::::::::::::::::::::::::: Fußzeile
+% Fusszeile gerade Seite[plain-style]{scrheadings-style}
+\lefoot[]{\titelfusszeilelinkseven} 
+\cefoot[]{\titelfusszeilemitteeven}
+\refoot[]{\titelfusszeilerechtseven}
+% Fusszeile ungerade Seite
+\lofoot[]{\titelfusszeilelinksodd}
+\cofoot[]{\titelfusszeilemitteodd}
+\rofoot[]{\titelfusszeilerechtsodd}
+%\rofoot[\thepage ]{\thepage}
+%\setfoottopline{0.2pt} % obere Linie in der Kopfzeile; nur bei scrartcl
+%\setfootsepline{0.4pt} % untere Linie in der Kopfzeile; nur bei scrartcl
+\KOMAoptions{footsepline=0.4pt}

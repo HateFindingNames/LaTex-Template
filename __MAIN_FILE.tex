@@ -1,16 +1,15 @@
 \documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
 %-----------------------------------------------------------------
 \usepackage{etoolbox}
-\providetoggle{deutsch}
-\global\toggletrue{deutsch}
-% \global\togglefalse{deutsch}
+\newbool{deutsch}
+% \booltrue{deutsch}
 %-----------------------------------------------------------------
 \input{pre-packages}
 \input{pre-variables}
 \input{pre-newcommand}
-\input{pre-Seitenlayout}
-\input{pre-Kopf-Fusszeile-2010}
-\input{pre-Kopf-Fusszeilen-text-Bericht}
+\input{pre-page-layout}
+\input{pre-header-footer-2010}
+\input{pre-header-footer-text-report}
 \DeclareNameAlias{author}{family-given}
 \DeclareNameAlias{editor}{family-given}
 \DeclareNameAlias{translator}{family-given}
@@ -28,8 +27,8 @@
 \listoffigures 
 \listoftables
 \input{chapters/glossary}
-% \appendix
-% \input{chapters/appendix}
+\appendix
+\input{chapters/appendix}
 \printbibliography
 %=================================================================
 \end{document}

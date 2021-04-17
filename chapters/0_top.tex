@@ -1,13 +1,13 @@
 \begin{titlepage}
 	% -------- Naming ------------------------------
-	\iftoggle{deutsch}{%
-	\newcommand{\nameA}{\thefirstnameA\space\thelastnameA}
-	\newcommand{\nameB}{}
-	\newcommand{\nameC}{}
+	\ifbool{deutsch}{%
+		\newcommand{\nameA}{\thefirstnameA\space\thelastnameA}
+		% \newcommand{\nameB}{\thefirstnameB\space\thelastnameB}
+		% \newcommand{\nameC}{\thefirstnameC\space\thelastnameC}
 	}{%
-	\newcommand{\nameA}{\thelastnameA\,\space\thefirstnameA}
-	\newcommand{\nameB}{}
-	\newcommand{\nameC}{}
+		\newcommand{\nameA}{\thelastnameA\,\space\thefirstnameA}
+		% \newcommand{\nameB}{\thelastnameB\,\space\thefirstnameB}
+		% \newcommand{\nameC}{\thelastnameC\,\space\thefirstnameC}
 	}
 	% ----------------------------------------------
 	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 	
@@ -15,32 +15,27 @@
 	\textsc{\Large Hochschule RheinMain} \par
 	\begin{center}
 		\includegraphics[width=0.15\textwidth]{logo-hsrm.jpg}
-	\end{center}%\vspace{.5cm}
-%	\textsc{\Large Hochschule RheinMain}\vspace{1cm]
-	\textsc{\LARGE \titelLV}\vspace{0.5cm}
+	\end{center}
+	\textsc{\LARGE \titleLV}\vspace{0.5cm}
 		\HRule\vspace{0.4cm}
-	{\huge\bfseries \untertitela}\par\vspace{0.4cm} % Titel des Dokuments
-	{\huge\bfseries \untertitelb}\par\vspace{0.4cm} % Titel des Dokuments
+	{\huge\bfseries \subtitleA}\par\vspace{0.4cm} % Title of Document
+	{\huge\bfseries \subtitleB}\par\vspace{0.4cm} % Titel des Dokuments
 		\HRule\vspace{1.5cm}
 %-------------------
-%\begin{flushleft}
-	\begin{minipage}{0.4\textwidth}
-%	\begin{flushleft}
-%\centering
-		\large
-		\iftoggle{deutsch}{%
-			\textit{\underline{Autor}}\par\vspace{0.5cm}
-		}{%
-			\textit{\underline{Author}}\par\vspace{0.5cm}
-		}
-		\textsc{\nameA}\par\vspace{0.5cm}
-		\textsc{\nameB}\par\vspace{0.5cm}
-		\textsc{\nameC}\par\vspace{0.5cm}
-%	\end{flushleft}
+\begin{minipage}{0.4\textwidth}
+	\large
+	\ifbool{deutsch}{%
+		\textit{\underline{Autor}}\par\vspace{0.5cm}
+	}{%
+		\textit{\underline{Author}}\par\vspace{0.5cm}
+	}
+	\textsc{\nameA}\par\vspace{0.5cm}
+	% \textsc{\nameB}\par\vspace{0.5cm}
+	% \textsc{\nameC}\par\vspace{0.5cm}
 \end{minipage}
 %------------------------------------
 \vfill\vfill\vfill
-\iftoggle{deutsch}{%
+\ifbool{deutsch}{%
 	\textsc{\Large Fachbereich Ingenieurwissenschaften}\vspace{0.5cm}\par
 	\textsc{\large Studienbereich Angewandte Physik \& Medizintechnik}\vspace{0.5cm}
 	\vfill

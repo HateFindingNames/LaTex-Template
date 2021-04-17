@@ -6,7 +6,7 @@
 \usepackage{array}
 %\usepackage[ngerman]{babel}
 %\usepackage[ngerman]{varioref}
-\iftoggle{deutsch}{%
+\ifbool{deutsch}{%
     \usepackage[ngerman]{babel}
     \usepackage[ngerman]{varioref}
 }{%
@@ -50,7 +50,7 @@
 \usepackage{multirow}
 \usepackage{multicol}
 %\usepackage[intoc]{nomencl}   % zwei Spalten beim Formelzeichenverzeichnis
-\iftoggle{deutsch}{%
+\ifbool{deutsch}{%
     \usepackage[german,intoc]{nomentbl} %vier Spalten bei Formelzeichenverzeichnis
 }{%
     \usepackage[english,intoc]{nomentbl} %vier Spalten bei Formelzeichenverzeichnis
@@ -71,7 +71,8 @@
 %\usepackage{sistyle}
 %\usepackage[locale=DE]{siunitx} %nicht zusammen mit sistyle %---------
 \usepackage[locale=DE,per-mode=symbol,parse-numbers=false]{siunitx} %nicht zusammen mit sistyle %---------
-\usepackage[font={scriptsize,sl},captionskip=3pt]{subfig} % für die Unterbilder %---------
+% \usepackage[font={scriptsize,sl},captionskip=3pt]{subfig} % für die Unterbilder %---------
+\usepackage{subcaption}
 \usepackage{shortvrb}
 \usepackage{tablefootnote}
 \usepackage{tabularx}
@@ -81,13 +82,13 @@
 \usepackage{tikz}
 \usepackage{times} 
 \usepackage{units} %----------
-\usepackage{url}
+\usepackage{xurl}
 \usepackage{wrapfig} %----------
 \usepackage{xr-hyper}
 \usepackage{arydshln} %für \hdashline[5pt/2pt] % muss am Ende stehen, sonst gibt es Probleme mit xcolor
-\usepackage{hyperref} % muss am Schluss stehen
+\usepackage[hidelinks]{hyperref} % muss am Schluss stehen
 \hypersetup{linkcolor={0 1 1}, linkbordercolor={1 1 1}, citebordercolor={1 1 1}} % setzt Linkboxen auf Farbe "`weiß"'
-%\usepackage{bm}
+%\usepackage{unicode-math}
 %\usepackage[toc,symbols]{glossaries} %---------- muss nach hyperref stehen
 \usepackage[nonumberlist, acronym, toc, section]{glossaries} % muss nach hypersetup stehen
 %----------------

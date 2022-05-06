@@ -1,8 +1,8 @@
-\documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
+\documentclass[paper=a4,german,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
 %-----------------------------------------------------------------
 \usepackage{etoolbox}
 \newbool{deutsch}
-% \booltrue{deutsch}
+\booltrue{deutsch}	% comment out to switch document to english
 %-----------------------------------------------------------------
 \input{pre-packages}
 \input{pre-variables}
@@ -10,25 +10,40 @@
 \input{pre-page-layout}
 \input{pre-header-footer-2010}
 \input{pre-header-footer-text-report}
+\input{pre-other-layouts}
 \DeclareNameAlias{author}{family-given}
 \DeclareNameAlias{editor}{family-given}
 \DeclareNameAlias{translator}{family-given}
-\addbibresource{quellen.bib}
+\addbibresource{literature.bib}
+%------DEBUGGING--------------------------------------------------
+% \usepackage[showframe]{geometry} % comment for live version
+% \usepackage{layout}
+% \usepackage{showframe}
+%-----------------------------------------------------------------
 \begin{document}
 %-----------------------------------------------------------------
 \input{chapters/0_top}
+\pagenumbering{Roman}
 \tableofcontents
 \newpage
+\input{chapters/nomenclature}
 %-----------------------------------------------------------------
-\newcommand{\chaptercount}{5} % put number of chapters here
-\foreach \c in {1,...,\chaptercount}{\input{chapters/\c_chap}}
+\clearpage\pagenumbering{arabic}
+\include{chapters/1_chap}
+\include{chapters/2_chap}
+\include{chapters/3_chap}
+\include{chapters/4_chap}
+\include{chapters/5_chap}
+\include{chapters/6_chap}
+\include{chapters/7_chap}
+\include{chapters/8_chap}
 %-----------------------------------------------------------------
 \newpage
-\listoffigures 
+\listoffigures
 \listoftables
-\input{chapters/glossary}
 \appendix
-\input{chapters/appendix}
-\printbibliography
+\input{chapters/appendixA}
+\input{chapters/appendixB}
+\printbibliography%
 %=================================================================
 \end{document}

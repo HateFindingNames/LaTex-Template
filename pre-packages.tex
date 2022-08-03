@@ -1,81 +1,81 @@
-\usepackage{microtype}
+\usepackage{scrhack} % Improving Third-Party Packages with scrhack https://ctan.mc1.root.project-creative.net/macros/latex/contrib/koma-script/doc/scrguide-en.pdf
+\usepackage{microtype} % Subliminal refinements towards typographical perfection https://ctan.org/pkg/microtype
 \usepackage[reqno,intlimits]{amsmath} % [reqno] um die gleichungsnummerierung rechts zu haben
 % intlimits: Grenzen für Integrale unterhalb und oberhalb des Zeichens
-\usepackage{amssymb}
-\usepackage{array}
-\ifbool{deutsch}{\usepackage[ngerman]{babel}}{\usepackage[english]{babel}}
-\usepackage{varioref}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{booktabs}
-\usepackage{calc}
-\usepackage{cancel} % Place lines through maths formulae
-\usepackage[labelfont={footnotesize,sf,bf},textfont={footnotesize,sf}]{caption} %Format (Textgröße, Textform) für Bildtext 
+\usepackage{amssymb} % math symbols
+\usepackage{array} % Extending the array and tabular environments https://ctan.org/pkg/array
+\ifbool{deutsch}{%
+    \usepackage[ngerman]{babel}
+}{%
+    \usepackage[english]{babel}
+}
+\usepackage[T1]{fontenc} % Standard package for selecting font encodings https://ctan.org/pkg/fontenc
+\usepackage[utf8]{inputenc} % Accept different input encodings https://ctan.org/pkg/inputenc
+\usepackage{lmodern} % Latin modern fonts in outline formats https://www.ctan.org/pkg/lm
+\usepackage{booktabs} % Publication quality tables in LaTeX https://ctan.org/pkg/booktabs
+\usepackage{calc} % Simple arithmetic in LaTeX commands https://ctan.org/pkg/calc
+% \usepackage{cancel} % Place lines through maths formulae https://ctan.org/pkg/cancel
+\usepackage[labelfont={footnotesize,sf,bf},textfont={footnotesize,sf}]{caption} % Customising captions in floating environments https://ctan.org/pkg/caption
 %normalsize
 %scriptsize
 % sc --> smallcaps
 % bf --> bold face
 % sf --> sans serif
-\usepackage[table]{xcolor}
-\usepackage[right]{eurosym}
-\usepackage{ellipsis}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{gensymb}
-\usepackage{csquotes}
-\usepackage{listings}
-\usepackage{longtable}
-\usepackage{lastpage}
-\usepackage{lscape}
-\usepackage{lmodern} % Silbentrennung
-\usepackage{makeidx}
-\usepackage{multirow}
-\usepackage{multicol}
-\usepackage[intoc]{nomencl} % zwei Spalten beim Formelzeichenverzeichnis
-\usepackage{nicefrac}
-\usepackage{paralist} % This package provides some new list environments. Itemized and enumerated lists can be typeset within paragraphs, as paragraphs and in a compact version. Most environments have optional arguments to format the labels. Additionally, the LATEX environments itemize and enumerate can be extended to use a similar optional argument.
-\usepackage{pdfpages} % https://www.ctan.org/pkg/pdfpages
-% Define user colors using the RGB model
-%\usepackage{colortbl}
-%\definecolor{dunkelgrau}{rgb}{0.8,0.8,0.8}
-%\definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
-\usepackage[figuresright]{rotating}
-\usepackage{scrlayer-scrpage}
-\usepackage[locale=DE,per-mode=fraction]{siunitx}
-% \usepackage[font={scriptsize,sl},captionskip=3pt]{subfig}
-\usepackage{subcaption}
-\usepackage{shortvrb}
-\usepackage{tablefootnote}
-\usepackage{tabularx}
-\usepackage{tabulary}
-\usepackage{textcomp}
-\usepackage{tocbasic}
-% \usepackage{tikz}
-\usepackage{times}
-\usepackage{xurl}
-\usepackage{wrapfig}
-\usepackage{hyperref} % muss am Schluss stehen
+\usepackage[table]{xcolor} % Driver-independent color extensions for LaTeX and pdfLaTeX https://ctan.org/pkg/xcolor
+\usepackage{currency} % Format currencies in a consistent way https://ctan.org/pkg/currency
+\DefineCurrency{EUR}{name={Euro},plural={Euro},iso={EUR},kind=iso,symbol={\€}}
+\usepackage{ellipsis} % Fix uneven spacing around ellipses in LaTeX text mode https://ctan.org/pkg/ellipsis
+\usepackage{graphicx} % Enhanced support for graphics https://ctan.org/pkg/graphicx
+% \usepackage{float} % Improved interface for floating objects https://ctan.org/pkg/float
+% \usepackage{gensymb} % Generic symbols for both text and math mode https://ctan.org/pkg/gensymb
+% \usepackage{csquotes} % Context sensitive quotation facilities https://ctan.org/pkg/csquotes
+\usepackage{listings} % Typeset source code listings using LaTeX https://ctan.org/pkg/listings
+\usepackage{longtable} % Allow tables to flow over page boundaries https://ctan.org/pkg/longtable
+\usepackage{lastpage} % Reference last page for Page N of M type footers https://ctan.org/pkg/lastpage
+% \usepackage{lscape} % Place selected parts of a document in landscape https://ctan.org/pkg/lscape
+\usepackage{makeidx} % Standard LaTeX package for creating indexes https://www.ctan.org/pkg/makeidx
+% \usepackage{multirow} % Create tabular cells spanning multiple rows https://www.ctan.org/pkg/multirow
+% \usepackage{multicol} % Intermix single and multiple columns https://www.ctan.org/pkg/multicol
+% \usepackage{nicefrac} % Typeset in-line fractions in a "nice" way https://www.ctan.org/pkg/nicefrac
+\usepackage{paralist} % Enumerate and itemize within paragraphs https://www.ctan.org/pkg/paralist
+% \usepackage{parallel} % Typeset parallel texts https://www.ctan.org/pkg/parallel
+% \usepackage{pdfpages} % Include PDF documents in LaTeX https://www.ctan.org/pkg/pdfpages
+% \usepackage[figuresright]{rotating} % Rotation tools, including rotated full-page floats https://www.ctan.org/pkg/rotating
+\usepackage{scrlayer-scrpage} % Define and manage page styles https://www.ctan.org/pkg/scrlayer-scrpage
+\usepackage[locale=DE,per-mode=power,range-units=repeat,separate-uncertainty=true]{siunitx} % A comprehensive (SI) units package https://www.ctan.org/pkg/siunitx
+\DeclareSIUnit\amperehour{Ah}
+\DeclareSIUnit\watthour{Wh}
+% \usepackage[font={scriptsize,sl},captionskip=3pt]{subfig} % Figures broken into subfigures https://www.ctan.org/pkg/subfig
+\usepackage{subcaption} % Support for sub-captions https://www.ctan.org/pkg/subcaption
+% \usepackage{shortvrb} % Abbreviated verbatim commands https://www.ctan.org/pkg/shortvrb
+\usepackage{tablefootnote} % Permit footnotes in tables https://www.ctan.org/pkg/tablefootnote
+\usepackage{tabularx} % Tabulars with adjustable-width columns https://www.ctan.org/pkg/tabularx
+% \usepackage{tabulary} % Tabular with variable width columns balanced https://www.ctan.org/pkg/tabulary
+% \usepackage{textcomp} % LaTeX support for the Text Companion fonts https://www.ctan.org/pkg/textcomp
+\usepackage{tocbasic} % Management of tables/lists of contents (and the like) https://www.ctan.org/pkg/tocbasic
+\usepackage{xurl} % Allow URL breaks at any alphanumerical character https://www.ctan.org/pkg/xurl
+% \usepackage{wrapfig} % Produces figures which text can flow around https://www.ctan.org/pkg/wrapfig
+% \usepackage{xr-hyper} % Inter-document hyper-references https://www.ctan.org/pkg/xr-hyper
+% \usepackage{arydshln} % Draw dash-lines in array/tabular https://www.ctan.org/pkg/arydshln
+\usepackage{varioref} % Intelligent page references https://ctan.org/pkg/varioref
+\usepackage{hyperref} % Extensive support for hypertext in LaTeX https://www.ctan.org/pkg/hyperref
 \hypersetup{
     colorlinks=true, % Color links instead of disgusting boxes :barfing_emoji:
     linkcolor={black}, % Color of internal links
     citecolor={black}, % Color of citations
     urlcolor={blue} % Color of external hyperlinks
 }
-%\usepackage{unicode-math}
-\usepackage[nonumberlist, acronym, toc, section]{glossaries} % muss nach hypersetup stehen
-%\usepackage{romannum} % Seitenzahlen in römischen Ziffern
-\usepackage{scrhack}
-\usepackage[style=numeric, citestyle=numeric, backend=biber]{biblatex}
-\usepackage[useregional]{datetime2}
-\usepackage{cleveref}
-% \usepackage{isotope} % um chemische gleichungen hübscher darstellen zu können
-\usepackage{framed} % rahmen um dinge malen können
-\usepackage{svg} % um auch vektorgrafiken als bild einfügen zu können
-\usepackage{adjustbox} % skaliert floats dynamischer (anti-over/underfull)
-\usepackage[numbered]{bookmark} % platziert im pdf reader bei der kapitelübersicht die jeweiligen kapitelnummer vor die kapitelüberschriften
-%
+\usepackage{cleveref} % Intelligent cross-referencing https://www.ctan.org/pkg/cleveref
+% \usepackage[nonumberlist, acronym, toc, section]{glossaries} % Create glossaries and lists of acronyms https://www.ctan.org/pkg/glossaries
+\usepackage[style=numeric, citestyle=numeric, backend=biber, date=short]{biblatex} % Sophisticated Bibliographies in LaTeX https://www.ctan.org/pkg/biblatex
+\usepackage[useregional]{datetime2} % Formats for dates, times and time zones https://www.ctan.org/pkg/datetime2
+% \usepackage{isotope} % A package for typesetting isotopes https://www.ctan.org/pkg/isotope
+% \usepackage{framed} % Framed or shaded regions that can break across pages https://www.ctan.org/pkg/framed
+\usepackage[inkscapearea=page]{svg} % Include and extract SVG pictures in LaTeX documents https://ctan.org/pkg/svg
+% \usepackage{adjustbox} % Graphics package-alike macros for “general” boxes https://www.ctan.org/pkg/adjustbox
+\usepackage[numbered]{bookmark} % A new bookmark (outline) organization for hyperref https://www.ctan.org/pkg/bookmark
 % ---------- Make floats stay within the chapter/section/subsection they got placed ------------------
-\usepackage{placeins}
+\usepackage{placeins} % Control float placement https://www.ctan.org/pkg/placeins
 \let\Oldsection\section
 \renewcommand{\section}[1]{\FloatBarrier\Oldsection{#1}}
 \let\Oldsubsection\subsection

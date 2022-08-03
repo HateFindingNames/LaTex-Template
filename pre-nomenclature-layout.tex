@@ -1,0 +1,21 @@
+\ifbool{deutsch}{%
+    \usepackage[intoc,german]{nomencl}\makenomenclature % Produce lists of symbols as in nomenclature https://www.ctan.org/pkg/nomencl
+    \renewcommand{\nomgroup}[1]{%
+    \ifstrequal{#1}{A}{\item[\textbf{Abkürzungen}]}{%
+    \ifstrequal{#1}{G}{\vspace{20pt}\item[\textbf{Griechische Zeichen}]}{%
+    \ifstrequal{#1}{L}{\vspace{20pt}\item[\textbf{Lateinische Zeichen}]}{}}}%
+    }%
+    \renewcommand{\nomname}{Nomenklatur}
+}{%
+    \usepackage[intoc]{nomencl}\makenomenclature
+    \renewcommand{\nomgroup}[1]{%
+    \ifstrequal{#1}{A}{\item[\textbf{Abbreviations}]}{%
+    \ifstrequal{#1}{G}{\vspace{20pt}\item[\textbf{Greek Symbols}]}{%
+    \ifstrequal{#1}{L}{\vspace{20pt}\item[\textbf{Roman Symbols}]}{}}}%
+    }%
+    \renewcommand{\nomname}{Nomenclature}
+}
+\newcommand{\nomunit}[1]{%
+\renewcommand{\nomentryend}{\hspace*{\fill}\(\left[\unit{#1}\right]\)}}
+\setlength{\nomitemsep}{.3\parsep}
+% \renewcommand{\nomlabel}[1]{#1\hfil}

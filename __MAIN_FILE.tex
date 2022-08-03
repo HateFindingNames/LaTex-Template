@@ -6,11 +6,11 @@
 %-----------------------------------------------------------------
 \input{pre-packages}
 \input{pre-variables}
-\input{pre-newcommand}
 \input{pre-page-layout}
 \input{pre-header-footer-2010}
 \input{pre-header-footer-text-report}
-\input{pre-other-layouts}
+\input{pre-listings-layouts}
+\input{pre-nomenclature-layout}
 \DeclareNameAlias{author}{family-given}
 \DeclareNameAlias{editor}{family-given}
 \DeclareNameAlias{translator}{family-given}
@@ -26,7 +26,7 @@
 \pagenumbering{Roman}
 \tableofcontents
 \newpage
-\input{chapters/nomenclature}
+\printnomenclature[4cm]
 %-----------------------------------------------------------------
 \clearpage\pagenumbering{arabic}
 \include{chapters/1_chap}
